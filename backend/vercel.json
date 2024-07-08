@@ -8,8 +8,26 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/",
       "dest": "/"
+    },
+    {
+      "src": "/home",
+      "dest": "/"
+    },
+    {
+      "src": "/login",
+      "dest": "/"
+    },
+    {
+      "src": "/signup",
+      "dest": "/"
+    }
+  ],
+  "rewrites":[
+    {
+      "source": "/(.*)",
+      "destination": "/"
     }
   ]
 }

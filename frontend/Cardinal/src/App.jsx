@@ -11,9 +11,9 @@ const routes = (
   <Router>
     <div className="min-h-screen ">
     <Routes>
-      <Route path='home' exact element={<Home />} />
-      <Route path='login' exact element={<Login />} />
-      <Route path='signup' exact element={<SignUp />} />
+      <Route path='/home' exact element={<Home />} />
+      <Route path='/login' exact element={<Login />} />
+      <Route path='/signup' exact element={<SignUp />} />
       <Route path='/' exact element={<Login />} />
     </Routes>
     <DarkModeToggle/>
