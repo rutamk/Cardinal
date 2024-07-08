@@ -29,14 +29,19 @@ const Login = () => {
     setError("");
 
     try {
+      console.log(1);
       const response = await axiosInstance.post("/login", {
         email: email,
         password: password,
       });
+      console.log(2);
 
       if (response.data && response.data.accessToken) {
+        console.log(3);
         localStorage.setItem("token", response.data.accessToken);
+        console.log(4);
         navigate("/home");
+        console.log(5);
       }
     } catch (error) {
       if (error.response && error.response.data && error.response.data.message) {
