@@ -14,7 +14,7 @@
     }
   ],
   "rewrites": [
-    { "src": "/(.*)", "dest": "/",
+    { "src": "/(.*)", "dest": "/index.html",
     "status":"200" }
   ]
 }
