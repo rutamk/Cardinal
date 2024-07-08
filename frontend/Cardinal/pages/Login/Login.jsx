@@ -47,6 +47,19 @@ const Login = () => {
     }
   };
 
+  // Function to toggle dark mode
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    // Optionally, you can store the darkMode state in localStorage here
+    localStorage.setItem('darkMode', JSON.stringify(!darkMode));
+  };
+
+  // Load dark mode state from localStorage on component mount
+  useEffect(() => {
+    const storedDarkMode = localStorage.getItem('darkMode');
+    setDarkMode(storedDarkMode ? JSON.parse(storedDarkMode) : false);
+  }, []);
+
   return (
     <div className={`${darkMode ? "dark" : ""}`}>
 
