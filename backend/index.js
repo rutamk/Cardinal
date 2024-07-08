@@ -3,7 +3,7 @@ require("dotenv").config();
 const config = require("./config.json");
 const mongoose = require("mongoose");
 
-mongoose.connect(config.connectionString);
+mongoose.connect(process.env.ATLAS_DB_URL);
 
 const User = require("./models/user.model");
 const Note = require("./models/note.model");

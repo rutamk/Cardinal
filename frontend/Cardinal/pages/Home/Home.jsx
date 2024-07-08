@@ -201,6 +201,7 @@ const Home = () => {
         <Modal
           isOpen={openAddEditModal.isShown}
           onRequestClose={() => { }}
+          ariaHideApp={false}
           style={{
             overlay: {
               backgroundColor: "rgba(0,0,0,0.3)",
