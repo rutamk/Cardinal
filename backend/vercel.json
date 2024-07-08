@@ -9,10 +9,12 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "/",
+      "status":"200"
     }
   ],
   "rewrites": [
-    { "src": "/(.*)", "dest": "/" }
+    { "src": "/(.*)", "dest": "/",
+    "status":"200" }
   ]
 }
