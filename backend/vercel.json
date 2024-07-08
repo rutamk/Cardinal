@@ -9,8 +9,8 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/",
-      "status":200
+      "dest": "/"
+
     }
   ],
   "rewrites": [
