@@ -14,7 +14,7 @@ const routes = (
       <Route path='/home' exact element={<Home />} />
       <Route path='/login' exact element={<Login />} />
       <Route path='/signup' exact element={<SignUp />} />
-      <Route path='' exact element={<SignUp />} />
+      <Route path='/' exact element={<SignUp />} />
     </Routes>
     <DarkModeToggle/>
     </div>
