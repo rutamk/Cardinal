@@ -19,7 +19,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: ["https://notes-app-backend-beryl.vercel.app/"],
+    origin: ["https://notes-app-backend-beryl.vercel.app/*"],
   })
 );
 
