@@ -371,7 +371,7 @@ app.delete("/delete-note/:noteId", authenticateToken, async (req, res) => {
 });
 
 //Update isPinned Value
-app.put("/update-note-isPinned/:noteId", authenticateToken, async (req, res) => {
+app.put("/update-note-pinned/:noteId", authenticateToken, async (req, res) => {
     const noteId = req.params.noteId;
     const { isPinned } = req.body;
     const { user } = req.user;
