@@ -6,12 +6,7 @@ const DarkModeToggle = () => {
   const [darkMode, setDarkMode] = useState(() => {
     // Retrieve the stored dark mode value from localStorage
     const storedDarkMode = localStorage.getItem('darkMode');
-    if (storedDarkMode !== null) {
-      return JSON.parse(storedDarkMode);
-    } else {
-      // Use the system preference as the default if not explicitly set
-      return !window.matchMedia('(prefers-color-scheme: dark)').matches;
-    }
+    return storedDarkMode ? JSON.parse(storedDarkMode) : false;
   });
 
   useEffect(() => {
@@ -24,6 +19,7 @@ const DarkModeToggle = () => {
       localStorage.setItem('darkMode', JSON.stringify(false));
     }
   }, [darkMode]);
+
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -38,7 +34,7 @@ const DarkModeToggle = () => {
       onClick={toggleDarkMode}
       aria-label="Toggle Dark Mode"
     >
-      {darkMode ? <MdSunny /> : <FaMoon />}
+       {darkMode ? <MdSunny /> : <FaMoon />}
     </button>
   );
 };
