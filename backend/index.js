@@ -21,7 +21,7 @@ const { authenticateToken } = require("./utilities")
 app.use(express.json());
 
   app.use(cors({
-    origin: 'https://cardinal-six.vercel.app',
+    origin: 'https://cardinal-rho.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true  // Enable credentials (cookies, authorization headers) cross-origin
