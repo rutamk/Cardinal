@@ -184,7 +184,7 @@ const Home = () => {
           )}
         </div>
 
-        <button className='w-12 h-12 flex items-center justify-center rounded-2xl
+        <button className='w-14 h-14 flex items-center justify-center rounded-2xl
        bg-blue-500 hover:bg-blue-600 fixed bottom-7 right-[45%] sm:bottom-6 sm:right-6 transition-all hover:scale-110 ease-in-out
        dark:bg-[#ffd84c] dark:text-neutral-950 dark:hover:bg-[#f7c71d]'
           onClick={() => {
