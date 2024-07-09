@@ -19,13 +19,7 @@
   
 }
 
-@layer components{
-  .day-mode-svg {
-    filter: invert(0);
-  }
-
-  .night-mode-svg {
-    filter: invert(0.9);
-  }
+@media (prefers-color-scheme:dark){
+  background-color: #fdfeff;
 }
 
