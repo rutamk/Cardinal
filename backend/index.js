@@ -21,7 +21,7 @@ const { authenticateToken } = require("./utilities")
 app.use(express.json());
 
   app.use(cors({
-    origin: '*',
+    origin: 'https://cardinal-rho.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true  // Enable credentials (cookies, authorization headers) cross-origin
@@ -30,6 +30,8 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.json({ data: "hello" })
 });
+
+app.options('/login', cors());
 
 //Create ACCOUNT
 app.post("/create-account", async (req, res) => {
