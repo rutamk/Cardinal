@@ -204,6 +204,7 @@ const Home = () => {
             overlay: {
               backgroundColor: "rgba(0,0,0,0.3)",
               WebkitBackdropFilter: "blur(3px)",
+              z-index:"20",
             },
           }}
           contentLabel=""
