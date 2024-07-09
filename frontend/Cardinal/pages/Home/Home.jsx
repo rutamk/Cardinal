@@ -15,7 +15,6 @@ const Home = () => {
   const [userInfo, setUserInfo] = useState(null);
   const [allNotes, setAllNotes] = useState([]);
   const [isSearch, setIsSearch] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
 
   const navigate = useNavigate();
   const [showToastMsg, setShowToastMsg] = useState({
@@ -217,7 +216,7 @@ const Home = () => {
             onClose={handleCloseModal}
             getAllNotes={getAllNotes}
             showToastMessage={showToastMessage}
-            darkMode={darkMode} />
+            />
         </Modal>
         <Toast
           isShown={showToastMsg.isShown}

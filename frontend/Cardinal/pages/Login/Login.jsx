@@ -4,16 +4,13 @@ import PasswordInput from '../../components/PasswordInput';
 import { validateEmail } from '../../utils/helper';
 import axiosInstance from '../../utils/axiosInstance';
 import SignLogNavbar from '../../components/SignLogNavbar';
-import { MdSunny } from 'react-icons/md';
-import { FaMoon } from 'react-icons/fa6';
 
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
-  const [darkMode, setDarkMode] = useState(false);
-
+ 
 
   const handleLogin = async (e) => {
     e.preventDefault();
