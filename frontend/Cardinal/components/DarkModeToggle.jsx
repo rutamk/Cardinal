@@ -6,7 +6,7 @@ const DarkModeToggle = () => {
   const [darkMode, setDarkMode] = useState(() => {
     // Retrieve the stored dark mode value from localStorage
     const storedDarkMode = localStorage.getItem('darkMode');
-    return storedDarkMode ? JSON.parse(storedDarkMode) : false;
+    return storedDarkMode ? JSON.parse(storedDarkMode) : true;
   });
 
   useEffect(() => {
