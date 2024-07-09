@@ -20,9 +20,8 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: '*',
-     credentials: true
-  })
+    origin: '*'
+    })
 );
 
 app.get("/", (req, res) => {
