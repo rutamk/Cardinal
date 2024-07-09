@@ -151,7 +151,6 @@ const Home = () => {
   };
 
   return (
-    <div className={`${darkMode ? "dark" : ""}`}>
       <div className='h-[100vh] bg-slate-50 dark:bg-neutral-900 overflow-auto'>
         <Navbar userInfo={userInfo}
           onSearchQuery={onSearchQuery}
@@ -228,7 +227,6 @@ const Home = () => {
         />
 
       </div>
-    </div>
   )
 }
 
