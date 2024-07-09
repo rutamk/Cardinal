@@ -1,11 +1,5 @@
 require("dotenv").config();
-
-
 const mongoose = require("mongoose");
-
-console.log("try mon conn");
-
-mongoose.connect(process.env.ATLAS_DB_URL);
 console.log("mon conn succ");
 
 const User = require("./models/user.model");
@@ -13,11 +7,12 @@ const Note = require("./models/note.model");
 
 const express = require("express");
 const cors = require("cors");
-const app = express();
 
 const jwt = require("jsonwebtoken");
 const { authenticateToken } = require("./utilities")
-// App Use Json
+
+const app = express();
+
 app.use(express.json());
 
   app.use(cors({
@@ -27,11 +22,11 @@ app.use(express.json());
     credentials: true  // Enable credentials (cookies, authorization headers) cross-origin
 }));
 
+mongoose.connect(process.env.ATLAS_DB_URL);
+
 app.get("/", (req, res) => {
   res.json({ data: "hello" })
 });
-
-app.options('/login', cors());
 
 //Create ACCOUNT
 app.post("/create-account", async (req, res) => {
