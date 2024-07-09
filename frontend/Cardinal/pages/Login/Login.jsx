@@ -53,7 +53,6 @@ const Login = () => {
   };
 
   return (
-    <div className={`${darkMode ? "dark" : ""}`}>
 
       <div className='min-h-screen min-w-screen flex flex-col bg-slate-50 dark:bg-neutral-900'>
         <SignLogNavbar />
@@ -95,7 +94,6 @@ const Login = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 }
 
