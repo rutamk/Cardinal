@@ -7,15 +7,25 @@
     }
   ],
   "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "Access-Control-Allow-Origin": "*" ,
-         "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT" ,
-        "Access-Control-Allow-Headers": "Content-Type,Authorization" }
-      ]
-    }
-  ]
+  {
+    "source": "/api/(.*)",
+    "headers": [
+      {
+        "key": "Access-Control-Allow-Origin",
+        "value": "https://cardinal-six.vercel.app"
+      },
+      {
+        "key": "Access-Control-Allow-Methods",
+        "value": "GET,OPTIONS,PATCH,DELETE,POST,PUT"
+      },
+      {
+        "key": "Access-Control-Allow-Headers",
+        "value": "Content-Type, Authorization"
+      }
+    ]
+  }
+]
+
   }
   
 
