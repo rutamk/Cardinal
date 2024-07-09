@@ -80,7 +80,6 @@ const AddEditNote = ({ noteData, type, onClose, getAllNotes, showToastMessage, d
   };
 
   return (
-    <div className={`${darkMode ? "dark" : ""}`}>
     <div className="relative">
       <button className='w-10 h-10 rounded-full flex items-center justify-center absolute -top-4 -right-4 overflow-hidden hover:bg-slate-100
        dark:hover:bg-neutral-600'
@@ -136,7 +135,6 @@ const AddEditNote = ({ noteData, type, onClose, getAllNotes, showToastMessage, d
         onClick={handleAddNote}>
         {type === "edit" ? "Update" : "Add"}
       </button>
-    </div>
     </div>
   )
 }
