@@ -20,7 +20,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: '*'
+    origin: 'https://cardinal-six.vercel.app'
     })
 );
 
