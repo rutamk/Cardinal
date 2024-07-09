@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import SunSVG from '../../assets/images/sun.svg';
-import MoonSVG from '../../assets/images/moon.svg';
 import { FaMoon, FaSun } from 'react-icons/fa6';
 import { MdSunny } from 'react-icons/md';
 
