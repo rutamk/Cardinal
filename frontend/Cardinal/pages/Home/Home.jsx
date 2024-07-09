@@ -183,7 +183,7 @@ const Home = () => {
         </div>
 
         <button className='w-14 h-14 flex items-center justify-center rounded-2xl
-       bg-blue-500 hover:bg-blue-600 fixed bottom-7 right-[45%] sm:bottom-6 sm:right-6 transition-all hover:scale-110 ease-in-out
+       bg-blue-500 hover:bg-blue-600 fixed bottom-7 right-[45%] sm:bottom-6 sm:right-6 transition-all hover:scale-110 ease-in-out z-10
        dark:bg-[#ffd84c] dark:text-neutral-950 dark:hover:bg-[#f7c71d]'
           onClick={() => {
             setOpenAddEditModal({
@@ -208,7 +208,7 @@ const Home = () => {
           }}
           contentLabel=""
           className={`w-[90%] sm:w-[80%] md:w-[60%] lg:w-[40%] max-h-[3/4] border-none bg-white dark:bg-neutral-900 dark:border dark:border-neutral-800
-               rounded-md mx-auto mt-20 p-5 `}
+               rounded-md mx-auto mt-20 p-5 z-20`}
         >
           <AddEditNote
             type={openAddEditModal.type}
