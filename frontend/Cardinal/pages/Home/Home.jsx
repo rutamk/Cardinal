@@ -184,7 +184,7 @@ const Home = () => {
 
         <button className='w-16 h-16 flex items-center justify-center rounded-2xl
        bg-blue-500 hover:bg-blue-600 fixed bottom-7 right-[45%] sm:bottom-6 sm:right-6 transition-all hover:scale-110 ease-in-out 
-       dark:bg-[#ffd84c] dark:text-neutral-950 dark:hover:bg-[#f7c71d]'
+       dark:bg-[#ffd84c] dark:text-neutral-950 dark:hover:bg-[#f7c71d] z-10'
           onClick={() => {
             setOpenAddEditModal({
               isShown: true,
@@ -204,11 +204,12 @@ const Home = () => {
             overlay: {
               backgroundColor: "rgba(0,0,0,0.3)",
               WebkitBackdropFilter: "blur(3px)",
+              z-index: "20"
             },
           }}
           contentLabel=""
           className={`w-[90%] sm:w-[80%] md:w-[60%] lg:w-[40%] max-h-[3/4] border-none bg-white dark:bg-neutral-900 dark:border dark:border-neutral-800
-               rounded-md mx-auto mt-20 p-5 `}
+               rounded-md mx-auto mt-20 p-5 z-20`}
         >
           <AddEditNote
             type={openAddEditModal.type}
