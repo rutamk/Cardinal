@@ -27,16 +27,14 @@ const DarkModeToggle = () => {
 
   return (
     <button
-      className="fixed bottom-10 left-10 bg-gray-100 dark:bg-neutral-700 text-gray-800 dark:text-neutral-300 p-2 rounded-full shadow-xl hover:scale-125 transition-all ease-in-out z-50"
+      className='w-9 h-10 flex items-center justify-center rounded-r-full
+                        text-slate-50 bg-blue-500 hover:bg-blue-600 fixed top-1/2 left-[0px] 
+                          transition-all hover:scale-110 opacity-40 hover:opacity-100 ease-in-out duration-200 
+                        dark:bg-[#ffd84c] dark:text-neutral-950 dark:hover:bg-[#f7c71d]'
       onClick={toggleDarkMode}
       aria-label="Toggle Dark Mode"
     >
-      {darkMode ? (
-        <MdSunny className=' text-neutral-100 h-9 w-9' />
-      ) : (
-        // <img src={MoonSVG} alt="Moon Icon" className="h-6 w-6" />
-        <FaMoon className=' text-black h-9 w-9' />
-      )}
+       {darkMode ? <MdSunny /> : <FaMoon />}
     </button>
   );
 };
