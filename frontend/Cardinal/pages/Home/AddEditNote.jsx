@@ -3,7 +3,7 @@ import TagInput from '../../components/TagInput';
 import { MdClose } from 'react-icons/md';
 import axiosInstance from '../../utils/axiosInstance';
 
-const AddEditNote = ({ noteData, type, onClose, getAllNotes, showToastMessage, darkMode}) => {
+const AddEditNote = ({ noteData, type, onClose, getAllNotes, showToastMessage}) => {
 
   const [title, setTitle] = useState(noteData?.title || "");
   const [content, setContent] = useState(noteData?.content || "");
