@@ -208,7 +208,7 @@ const Home = () => {
     },
   }}
   contentLabel=""
-  className={`w-[90%] sm:w-[80%] md:w-[60%] lg:w-[40%] max-h-[3/4] border-none bg-white dark:bg-neutral-900 dark:border dark:border-neutral-800
+  className={`w-[90%] sm:w-[80%] md:w-[60%] lg:w-[40%] max-h-[80%] border-none bg-white dark:bg-neutral-900 dark:border dark:border-neutral-800
        rounded-md mx-auto mt-20 p-5 z-20 overflow-y-scroll overscroll-contain`}
 >
           <AddEditNote
