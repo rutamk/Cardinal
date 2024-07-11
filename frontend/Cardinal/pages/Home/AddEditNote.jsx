@@ -88,29 +88,29 @@ const AddEditNote = ({ noteData, type, onClose, getAllNotes, showToastMessage}) 
          dark:text-neutral-200 ' />
       </button>
       <div className='flex flex-col gap-2 '>
-        <label className='text-xs text-slate-400
+        <label className='text-xs text-slate-500
          dark:text-[#ffd84c]'>
           Title
         </label>
         <input
           type='text'
           placeholder='Go to the gym'
-          className='text-2xl text-slate-950 outline-none p-2 rounded placeholder:text-slate-400 bg-slate-100 border-none
-          dark:border dark:border-neutral-600 dark:bg-neutral-800 dark:placeholder-neutral-400 dark:text-neutral-200'
+          className='text-2xl text-slate-950 outline-none p-2 rounded placeholder:text-slate-300 bg-slate-100 border-none
+          dark:border dark:border-neutral-600 dark:bg-neutral-800 dark:placeholder-neutral-500 dark:text-neutral-200'
           value={title}
           onChange={({ target }) => setTitle(target.value)}
         />
       </div>
       <div className='flex flex-col gap-2 mt-4'>
-        <label className='text-xs text-slate-400
+        <label className='text-xs text-slate-500
          dark:text-[#ffd84c]'>
           Content
         </label>
         <textarea
           type='text'
           placeholder='Content'
-          className='text-sm text-slate-950 outline-none p-2 bg-slate-100 rounded  placeholder:text-slate-400 border-none
-           dark:border dark:border-neutral-600 dark:bg-neutral-800 dark:placeholder-neutral-400 dark:text-neutral-200'
+          className='text-sm text-slate-950 outline-none p-2 bg-slate-100 rounded  placeholder:text-slate-300 border-none
+           dark:border dark:border-neutral-600 dark:bg-neutral-800 dark:placeholder-neutral-500 dark:text-neutral-200'
           rows={10}
           value={content}
           onChange={({ target }) => setContent(target.value)}
@@ -118,7 +118,7 @@ const AddEditNote = ({ noteData, type, onClose, getAllNotes, showToastMessage}) 
       </div>
 
       <div className='mt-3'>
-        <label className='text-xs text-slate-400
+        <label className='text-xs text-slate-500
          dark:dark:text-[#ffd84c]'>
           Tags
         </label>
