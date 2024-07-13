@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import TagInput from '../../components/TagInput';
 import { MdClose } from 'react-icons/md';
 import axiosInstance from '../../utils/axiosInstance';
+import 'quill/dist/quill.snow.css'; // Quill CSS
+import Quill from 'quill'; // Quill JS
+import DOMPurify from 'dompurify';
 
 const AddEditNote = ({ noteData, type, onClose, getAllNotes, showToastMessage}) => {
 
@@ -12,10 +15,11 @@ const AddEditNote = ({ noteData, type, onClose, getAllNotes, showToastMessage}) 
 
   // Add Note
   const addNewNote = async () => {
+    const sanitizedContent = DOMPurify.sanitize(content);
     try {
       const response = await axiosInstance.post("/add-note", {
         title,
-        content,
+        content: sanitizedContent,
         tags,
       });
       if (response.data && response.data.note) {
@@ -79,6 +83,36 @@ const AddEditNote = ({ noteData, type, onClose, getAllNotes, showToastMessage}) 
     }
   };
 
+  useEffect(() => {
+    // Initialize Quill editor
+    const quill = new Quill('#editor', {
+      theme: 'snow', // 'snow' for rich text toolbar
+      modules: {
+        toolbar: [
+          [{ 'header': '1' }, { 'header': '2' }, { 'font': [] }],
+          [{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'list': 'check' }],
+          ['blockquote','code-block'],
+          ['bold', 'italic', 'underline'],
+          [{ 'color': [] }, { 'align': [] }]
+        ],
+      },
+    });
+    quill.root.innerHTML = content;
+    const toolbar = quill.getModule('toolbar');
+        toolbar.container.classList.add(
+            'space-x-2', 'bg-slate-100', 'p-2', 'rounded', 'shadow-sm',
+            'text-sm', 'text-slate-950', 'dark:bg-neutral-800', 'dark:border-neutral-600', 'border-none'
+        );
+        toolbar.container.style.border = 'none';
+
+    quill.on('text-change', () => {
+      setContent(quill.root.innerHTML); // update content state on text change
+    });
+    return () => {
+      quill.off('text-change');
+    };
+  }, []); // run once on component mount
+
   return (
     <div className="relative">
       <button className='w-10 h-10 rounded-full flex items-center justify-center absolute -top-4 -right-4 overflow-hidden hover:bg-slate-100
@@ -106,15 +140,8 @@ const AddEditNote = ({ noteData, type, onClose, getAllNotes, showToastMessage}) 
          dark:text-[#ffd84c]'>
           Content
         </label>
-        <textarea
-          type='text'
-          placeholder='Content'
-          className='text-sm text-slate-950 outline-none p-2 bg-slate-100 rounded  placeholder:text-slate-300 border-none
-           dark:border dark:border-neutral-600 dark:bg-neutral-800 dark:placeholder-neutral-500 dark:text-neutral-200'
-          rows={10}
-          value={content}
-          onChange={({ target }) => setContent(target.value)}
-        />
+        <div id="editor" className="text-sm text-slate-950 bg-slate-100 rounded p-2 dark:bg-neutral-800 dark:text-neutral-200" style={{ minHeight: '300px', borderStyle: 'none' }}></div>
+      
       </div>
 
       <div className='mt-3'>
