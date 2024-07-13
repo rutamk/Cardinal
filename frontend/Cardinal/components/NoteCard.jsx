@@ -1,12 +1,11 @@
 import moment from 'moment'
 import React from 'react'
-import { MdCreate, MdDelete, MdOutlinePushPin, MdOutlineStarBorder, MdStar } from 'react-icons/md'
+import { MdCreate, MdDelete } from 'react-icons/md'
 import { TbStarFilled, TbStarOff } from 'react-icons/tb'
 
 const NoteCard = ({
     title,
     date,
-    content,
     tags,
     isPinned,
     onEdit,
@@ -31,10 +30,7 @@ const NoteCard = ({
                     : (<TbStarFilled className={'text-xl text-yellow-400 cursor-pointer shrink-0 transition-all ease-in-out hover:scale-125'}
                         onClick={onPinNote} />)}
             </div>
-            <p className='text-xs text-slate-600 mt-2 truncate select-text
-             dark:text-neutral-400' >
-                {content?.slice(0, 60)}
-            </p>
+            
             <div className='flex items-center justify-between mt-2'>
                 <div className='text-xs text-slate-500 select-text
                  dark:text-neutral-400 truncate'>
