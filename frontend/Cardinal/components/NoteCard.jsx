@@ -25,9 +25,9 @@ const NoteCard = ({
                         {moment(date).format('Do MMM YYYY')}
                     </span>
                 </div>
-                {!isPinned ? (<TbStarOff className={'text-xl text-slate-300 cursor-pointer shrink-0 transition-all ease-in-out hover:scale-125 dark:text-neutral-500'}
+                {!isPinned ? (<TbStarOff className={'mb-6 text-xl text-slate-300 cursor-pointer shrink-0 transition-all ease-in-out hover:scale-125 dark:text-neutral-500'}
                     onClick={onPinNote} />)
-                    : (<TbStarFilled className={'text-xl text-yellow-400 cursor-pointer shrink-0 transition-all ease-in-out hover:scale-125'}
+                    : (<TbStarFilled className={'mb-6 text-xl text-yellow-400 cursor-pointer shrink-0 transition-all ease-in-out hover:scale-125'}
                         onClick={onPinNote} />)}
             </div>
             
