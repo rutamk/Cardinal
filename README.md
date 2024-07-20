@@ -35,7 +35,7 @@ Explore the live demo: [ Cardinal live website ](https://cardinal-rho.vercel.app
 ## Installation
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/cardinal.git
+   git clone https://github.com/rutamk/cardinal.git
    cd cardinal
    ```
 
