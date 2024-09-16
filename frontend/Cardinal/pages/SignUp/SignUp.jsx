@@ -1,13 +1,12 @@
-import React, { useState } from 'react'
-import PasswordInput from '../../components/PasswordInput';
-import { Link } from 'react-router-dom';
-import { validateEmail } from '../../utils/helper';
-import axiosInstance from '../../utils/axiosInstance';
-import { useNavigate } from 'react-router-dom'
-import SignLogNavbar from '../../components/SignLogNavbar';
-import { MdSunny } from 'react-icons/md';
-import { FaMoon } from 'react-icons/fa6';
-
+import React, { useState } from "react";
+import PasswordInput from "../../components/PasswordInput";
+import { Link } from "react-router-dom";
+import { validateEmail } from "../../utils/helper";
+import axiosInstance from "../../utils/axiosInstance";
+import { useNavigate } from "react-router-dom";
+import SignLogNavbar from "../../components/SignLogNavbar";
+import { MdSunny } from "react-icons/md";
+import { FaMoon } from "react-icons/fa6";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -67,61 +66,73 @@ const SignUp = () => {
     }
   };
 
-
   return (
-      <div className='min-h-screen min-w-screen flex flex-col  bg-slate-50 select-none
-       dark:bg-neutral-900'>
-        <SignLogNavbar />
-        <div className='flex flex-grow items-center justify-center '>
-          <div className='w-96 border rounded bg-white border-slate-200 px-7 py-10 m-6 mb-20 select-none
-         dark:bg-neutral-800 dark:border-neutral-600 '>
-            <form onSubmit={handleSignUp}>
-              <h4 className='text-2xl mb-7 text-slate-950 dark:text-neutral-200 select-text'>SignUp</h4>
+    <div
+      className="min-h-screen min-w-screen flex flex-col  bg-slate-50 select-none
+       dark:bg-neutral-900"
+    >
+      <SignLogNavbar />
+      <div className="flex flex-grow items-center justify-center ">
+        <div
+          className="w-96 border rounded bg-white border-slate-200 px-7 py-10 m-6 mb-20 select-none
+         dark:bg-neutral-800 dark:border-neutral-600 "
+        >
+          <form onSubmit={handleSignUp}>
+            <h4 className="text-2xl mb-7 text-slate-950 dark:text-neutral-200 select-text">
+              SignUp
+            </h4>
 
-              <input
-                type='text'
-                placeholder='Name'
-                className='w-full text-sm text-slate-950 bg-transparent border-[1.5px] px-5 py-3 rounded mb-4 outline-none border-slate-200 placeholder-slate-400 select-none
-              dark:border-neutral-600 dark:placeholder-neutral-500 dark:text-neutral-100'
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
+            <input
+              type="text"
+              placeholder="Name"
+              className="w-full text-sm text-slate-950 bg-transparent border-[1.5px] px-5 py-3 rounded mb-4 outline-none border-slate-200 placeholder-slate-400 select-none
+              dark:border-neutral-600 dark:placeholder-neutral-500 dark:text-neutral-100"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
 
-              <input
-                type='email'
-                placeholder='Email'
-                className='w-full text-sm text-slate-950 bg-transparent border-[1.5px] px-5 py-3 rounded mb-4 outline-none border-slate-200 placeholder-slate-400 select-none
-              dark:border-neutral-600 dark:placeholder-neutral-500 dark:text-neutral-100'
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
+            <input
+              type="email"
+              placeholder="Email"
+              className="w-full text-sm text-slate-950 bg-transparent border-[1.5px] px-5 py-3 rounded mb-4 outline-none border-slate-200 placeholder-slate-400 select-none
+              dark:border-neutral-600 dark:placeholder-neutral-500 dark:text-neutral-100"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
 
-              <PasswordInput
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
+            <PasswordInput
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
 
-              {error && <p className='text-red-500 text-xs pb-1'>{error}</p>}
+            {error && <p className="text-red-500 text-xs pb-1">{error}</p>}
 
-              <button type='submit' className='w-full text-sm bg-blue-500 text-white p-2 rounded my-1 hover:bg-blue-600
-            dark:bg-[#ffd84c] dark:text-neutral-950 dark:hover:bg-[#f7c71d]'>
-                Create Account
-              </button>
+            <button
+              type="submit"
+              className="w-full text-sm bg-blue-500 text-white p-2 rounded my-1 hover:bg-blue-600
+            dark:bg-[#ffd84c] dark:text-neutral-950 dark:hover:bg-[#f7c71d]"
+            >
+              Create Account
+            </button>
 
-              <p className='text-sm text-center mt-4 text-slate-950 select-text
-               dark:text-neutral-200'>
-                Already have an account? {""}
-                <Link to="/login" className='font-medium text-blue-500 underline hover:text-blue-600 select-text
-              dark:text-[#ffd84c] dark:hover:text-[#f7c71d]'>
-                  Login
-                </Link>
-              </p>
-            </form>
-          </div>
+            <p
+              className="text-sm text-center mt-4 text-slate-950 select-text
+               dark:text-neutral-200"
+            >
+              Already have an account? {""}
+              <Link
+                to="/login"
+                className="font-medium text-blue-500 underline hover:text-blue-600 select-text
+              dark:text-[#ffd84c] dark:hover:text-[#f7c71d]"
+              >
+                Login
+              </Link>
+            </p>
+          </form>
         </div>
       </div>
-  )
-}
-
+    </div>
+  );
+};
 
 export default SignUp;
