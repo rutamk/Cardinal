@@ -7,13 +7,32 @@ Cardinal is a powerful and intuitive note-taking web application built using the
 
 Explore the live demo: [ Cardinal live website ](https://cardinal-rho.vercel.app).
 
+
+## Screenshots
+
+SignUp Page:
+
+![CleanShot 2024-07-17 at 14 46 27@2x](https://github.com/user-attachments/assets/10748a00-106e-4b4a-add1-f11b1662f3b1)
+
+Login Page: 
+
+![CleanShot 2024-07-17 at 14 46 39@2x](https://github.com/user-attachments/assets/960017db-c4e0-4c0a-9ad9-d04e4f3f8419)
+
+Add/Edit Modal with Rich text editor:
+
+![CleanShot 2024-07-17 at 14 50 52@2x](https://github.com/user-attachments/assets/e590eb95-d0b8-4655-b44c-42f391320d43)
+
+Home page:
+
+![CleanShot 2024-07-17 at 14 52 22@2x](https://github.com/user-attachments/assets/49493834-031c-41e8-b3c2-f2fec5914cbf)
+
+
 ## Table of Contents
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 - [Contact](#contact)
 
 ## Features
@@ -70,24 +89,6 @@ Explore the live demo: [ Cardinal live website ](https://cardinal-rho.vercel.app
 2. **Create and Edit Notes**: Use the rich text editor to take and format notes.
 3. **Switch Themes**: Dark and light themes are set according to User device preference.
 4. **Manage Notes**: View, edit, and delete your notes as needed.
-
-## Screenshots
-
-SignUp Page:
-
-![CleanShot 2024-07-17 at 14 46 27@2x](https://github.com/user-attachments/assets/10748a00-106e-4b4a-add1-f11b1662f3b1)
-
-Login Page: 
-
-![CleanShot 2024-07-17 at 14 46 39@2x](https://github.com/user-attachments/assets/960017db-c4e0-4c0a-9ad9-d04e4f3f8419)
-
-Add/Edit Modal with Rich text editor:
-
-![CleanShot 2024-07-17 at 14 50 52@2x](https://github.com/user-attachments/assets/e590eb95-d0b8-4655-b44c-42f391320d43)
-
-Home page:
-
-![CleanShot 2024-07-17 at 14 52 22@2x](https://github.com/user-attachments/assets/49493834-031c-41e8-b3c2-f2fec5914cbf)
 
 
 ## Contributing
